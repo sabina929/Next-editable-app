@@ -1,21 +1,22 @@
-import { Link } from 'next/link';
+import Link from 'next/link'
+import navStyles from '../styles/Navbar.module.css'
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link href='/'>Home</Link>
+    <nav className={navStyles.navigationContainer}>
+      <ul className={navStyles.listContainer}>
+        <li className={navStyles.listItem}>
+          <Link href='/'><a className={navStyles.listLink}>Home</a></Link>
         </li>
-        <li>
-          <Link href='/updatedemployeeslist'>Updated Employees</Link>
+        <li className={navStyles.listItem}>
+          <Link href='/updatedemployeeslist'><a className={navStyles.listLink}>Updated Employees</a></Link>
         </li>
-        <li>
-          <Link href='/deletedemployeeslist'>Deleted Employees</Link>
+        <li className={navStyles.listItem}>
+          <Link href='/deletedemployeeslist'><a className={navStyles.listLink}>Deleted Employees</a></Link>
         </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

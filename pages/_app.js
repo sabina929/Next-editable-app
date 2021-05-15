@@ -1,11 +1,11 @@
-import {EmployeesContextProvider}  from '../context/EmployeesContext';
+import Layout from '../components/Layout'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <EmployeesContextProvider>
+    <Layout>
       <Component {...pageProps} />
-    </EmployeesContextProvider>
+    </Layout>
   )
 }
 

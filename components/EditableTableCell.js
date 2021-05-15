@@ -1,8 +1,10 @@
-const EditableTableCell = ({cellAttrs, handleEmployeeTableCell, }) => {
+import tableStyles from '../styles/Table.module.css'
+
+const EditableTableCell = ({cellAttrs, handleEmployeeTableCell}) => {
     return (
-        <td>
-        <input type={cellAttrs.type} name={cellAttrs.name} id={cellAttrs.id} value={cellAttrs.value} rowid={cellAttrs.rowid} onChange={handleEmployeeTableCell}/>
-      </td>
+        <td className={tableStyles.tableData}>
+            <input type={cellAttrs.type} name={cellAttrs.name} id={cellAttrs.id} value={cellAttrs.inputValue} rowid={cellAttrs.rowid} onChange={handleEmployeeTableCell} className={tableStyles.tableInput}/>
+        </td>
     )
 }
 
