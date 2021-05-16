@@ -1,0 +1,76 @@
+
+section.listContainer article{
+    width: 83vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+  section.listContainer article p{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-transform:capitalize;
+    color: #74777A;
+    
+  }
+  
+  section.listContainer article div.employee{
+    background-color: #ffffff;
+    /* width: 254px; */
+    width: 264px;
+    height: auto;
+    padding: 28px 24px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 10px 24px 3px rgba(15, 34, 205, 0.05);
+    
+  }
+  section.listContainer article div.employee h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    text-transform:capitalize;
+    color: hsl(210, 3%, 20%);
+  }
+  section.listContainer article div.employee h3{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform:capitalize;
+    font-family: 'Roboto', sans-serif;
+    color: #0F22CD;
+  }
+  section.listContainer article div.employee div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  section.listContainer article div.employee div p{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: hsl(210, 3%, 20%);
+  }
+  section.listContainer article div.employee div p:not(:last-child){
+    margin-bottom: 12px;
+  }
+  section.listContainer article div.employee div p span{
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: #74777A;
+  }
+  

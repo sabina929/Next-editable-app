@@ -1,20 +1,21 @@
 import { useState, useEffect, useCallback, useContext } from 'react';
-// import {EmployeesContext} from '../context/EmployeesContext'
+import { useEmployees } from '../components/EmployeesContext'
 import Head from 'next/head'
+import listStyles from '../styles/List.module.css'
 
 const updatedemployeeslist = () => {
-    // const {updatedEmployees} = useContext(EmployeesContext)
+    const {updatedEmployees} = useEmployees()
 
-    // const [updatedButNotDeletedEmployees, setUpdatedButNotDeletedEmployees] = useState([])
+    const [updatedButNotDeletedEmployees, setUpdatedButNotDeletedEmployees] = useState([])
   
-    // const getNotDeletedEmployees = useCallback( () => {
-    //   const notDeletedEmployees = updatedEmployees.filter(updatedEmployee=> updatedEmployee.isDeleted !== true)
-    //   setUpdatedButNotDeletedEmployees(notDeletedEmployees)
-    // }, [updatedEmployees])
+    const getNotDeletedEmployees = useCallback( () => {
+      const notDeletedEmployees = updatedEmployees.filter(updatedEmployee=> updatedEmployee.isDeleted !== true)
+      setUpdatedButNotDeletedEmployees(notDeletedEmployees)
+    }, [updatedEmployees])
   
-    // useEffect(() => {
-    //     getNotDeletedEmployees()
-    // }, [updatedEmployees, getNotDeletedEmployees])
+    useEffect(() => {
+        getNotDeletedEmployees()
+    }, [updatedEmployees, getNotDeletedEmployees])
 
     return (
         <>
@@ -26,15 +27,15 @@ const updatedemployeeslist = () => {
             </Head>
 
 
-            <section className='list-container'>
+            <section className={listStyles.listContainer}>
                 <h1>Updated employees</h1>
                 <article>
 
-                    {/* {
+                    {
                         updatedButNotDeletedEmployees.length === 0 ? <p>Nothing here...</p> : updatedButNotDeletedEmployees.map(updatedEmployee =>{
                             const {id, name, surname, dateOfBirth, position, phoneNumber, inputId} = updatedEmployee
                             return (
-                                <div key={inputId} className="employee">
+                                <div key={inputId} className={listStyles.employee}>
                                     <h2>{name} {surname}</h2>
                                     <h3>{position}</h3>
                                     <div>
@@ -45,7 +46,7 @@ const updatedemployeeslist = () => {
                                 </div>
                             )
                         })
-                    } */}
+                    }
                 </article>
             </section>
         </>

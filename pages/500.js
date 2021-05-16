@@ -1,12 +1,12 @@
 import { Link } from 'next/link';
-const error = () => {
+const customServerSideError = () => {
     return (
         <div>
             <main>
                 <section className='error-container'>
                     <h1>OOOPS!</h1>
                     <article>
-                        <p>Page not found :(</p>
+                        <p>500 - Server-side error occurred</p>
                         <li>
                             <Link href='/'>
                                 <a>Go To Home</a>
@@ -19,4 +19,4 @@ const error = () => {
     )
 }
 
-export default error
+export default customServerSideError
