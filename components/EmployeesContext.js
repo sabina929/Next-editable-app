@@ -152,9 +152,9 @@ export const EmployeesContextProvider = ({ children }) => {
 
     // PAGINATION
     const paginate = useCallback((pageNumber) => {
-        const indexOfLastBook = pageNumber * employeesPerPage;
-        const indexOfFirstBook = indexOfLastBook - employeesPerPage;
-        const currentEmployees = employees.slice(indexOfFirstBook, indexOfLastBook);
+        const indexOfLastEmployee = pageNumber * employeesPerPage;
+        const indexOfFirstEmployee = indexOfLastEmployee - employeesPerPage;
+        const currentEmployees = employees.slice(indexOfFirstEmployee, indexOfLastEmployee);
         setCurrentEmployees(currentEmployees)
         setCurrentPage(pageNumber)
     }, [employeesPerPage, employees])
